@@ -9,7 +9,8 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def root_page():
-        return 'List of Papers:</br>' + "</br>".join(x['Title'] for x in mongo.db.papers.find({}, {'Title': True, "_id": False}))
+
+    return 'List of Papers:</br>' + "</br>".join(x['Title'] for x in mongo.db.papers.find({}, {'Title': True, "_id": False}))
 
 
 @app.route('/papers/<paper_id>')
