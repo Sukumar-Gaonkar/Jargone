@@ -18,9 +18,9 @@ def root_page():
 
 @app.route('/papers/<paper_id>/view')
 def show_paper(paper_id):
-    y = mongo.db.papers.find_one({'_id': ObjectId(paper_id)})
-    print(y)
-    return render_template('template_format.html', **y)
+    data = mongo.db.papers.find_one({'_id': ObjectId(paper_id)})
+    print(data)
+    return render_template('template_format.html', **data)
 
 
 @app.route('/papers/<paper_id>/edit')
