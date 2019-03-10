@@ -1,6 +1,9 @@
 from flask import Flask
+from flask import render_template
 from flask_pymongo import PyMongo
 from flask_pymongo import ObjectId
+import json
+from jinja2 import *
 
 
 app = Flask(__name__)
@@ -15,12 +18,15 @@ def root_page():
 
 @app.route('/papers/<paper_id>/view')
 def show_paper(paper_id):
-    id = paper_id
     y = mongo.db.papers.find_one({'_id': ObjectId(paper_id)})
-    return y['video_link']
+    print(y)
+    return render_template('home.html', **y)
+    
 
 @app.route('/papers/<paper_id>/edit')
 def edit_paper(paper_id):
+    y = mongo.db.papers.find_one({'_id': ObjectId(paper_id)})
+
     return "test"
 
 if __name__ == '__main__':
