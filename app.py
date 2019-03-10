@@ -20,8 +20,8 @@ def root_page():
 def show_paper(paper_id):
     y = mongo.db.papers.find_one({'_id': ObjectId(paper_id)})
     print(y)
-    return render_template('home.html', **y)
-    
+    return render_template('template_format.html', **y)
+
 
 @app.route('/papers/<paper_id>/edit')
 def edit_paper(paper_id):
