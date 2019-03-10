@@ -9,14 +9,11 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def root_page():
-    return """
-        <h1>Hello world!</h1>
 
-        <iframe src="https://www.youtube.com/embed/YQHsXMglC9A"
-         width="853" height="480" frameborder="0"
-         allowfullscreen></iframe>
-        """
-        # return 'List of Papers:</br>' + "</br>".join(x['Title'] for x in mongo.db.papers.find({}, {'Title': True, "_id": False}))
+    return """
+
+    return 'List of Papers:</br>' + "</br>".join(x['Title'] for x in mongo.db.papers.find({}, {'Title': True, "_id": False}))
+
 
 
 @app.route('/papers/<paper_id>/view')

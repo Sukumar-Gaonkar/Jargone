@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5c846c61e3b2925e782d6314"},"name":"Jeffrey Dean","institution":"Google"}
+{"_id":{"$oid":"5c846cb69e3ace5e78d4e9c5"},"name":"Sanjay Ghemawat","institution":"Google"}
+{"_id":{"$oid":"5c847178e3b2925e782d6317"},"name":"Matei Zaharia","institution":"University of California, Berkeley"}
+{"_id":{"$oid":"5c84718ce3b2925e782d6318"},"name":"Mosharaf Chowdhury","institution":"University of California, Berkeley"}
+{"_id":{"$oid":"5c84719ae3b2925e782d6319"},"name":"Tathagata Das","institution":"University of California, Berkeley"}
