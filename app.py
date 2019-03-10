@@ -9,10 +9,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def root_page():
-
-    return """
-
-    return 'List of Papers:</br>' + "</br>".join(x['Title'] for x in mongo.db.papers.find({}, {'Title': True, "_id": False}))
+  return 'List of Papers:</br>' + "</br>".join(x['Title'] for x in mongo.db.papers.find({}, {'Title': True, "_id": False}))
 
 
 
@@ -24,7 +21,7 @@ def show_paper(paper_id):
 
 @app.route('/papers/<paper_id>/edit')
 def edit_paper(paper_id):
-    # return "Showing Paper : " + paper_id
+    return "test"
 
 if __name__ == '__main__':
     app.run()
